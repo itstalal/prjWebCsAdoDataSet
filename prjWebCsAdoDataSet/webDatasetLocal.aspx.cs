@@ -75,6 +75,9 @@ namespace prjWebCsAdoDataSet
 
 
             // Creer les champs indexes
+            DataColumn[] mykey = new DataColumn[1];
+            mykey[0] = myTB.Columns["RefEquipe"];
+            myTB.PrimaryKey = mykey;
 
             // Remplir la table Equipes avec des donnees
             DataRow myRow = myTB.NewRow();
@@ -112,10 +115,71 @@ namespace prjWebCsAdoDataSet
 
 
 
+            // sauvegarde la Table
+            mySet.Tables.Add(myTB);
+
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            // Creer la table Joueurs
+             myTB = new DataTable("Joueurs");
+
+            // Creer le champ ou column RefJoueurs
+             myCol = new DataColumn("RefJoueur", typeof(Int64));
+
+            myCol.AutoIncrement = true;
+            myCol.AutoIncrementSeed = 1;
+            myCol.AutoIncrementStep = 1;
+            // Sauvegarder le champ dans la table 
+            myTB.Columns.Add(myCol);
+
+
+            // Creer le champ ou column Nom
+            myCol = new DataColumn("Nom", typeof(string));
+
+            myCol.MaxLength = 50;
+            // Sauvegarder le champ dans la table 
+            myTB.Columns.Add(myCol);
+
+
+
+            // Creer le champ ou column Poste
+            myCol = new DataColumn("Poste", typeof(string));
+
+            myCol.MaxLength = 50;
+            // Sauvegarder le champ dans la table 
+            myTB.Columns.Add(myCol);
+
+            // Creer le champ ou column Salaire
+            myCol = new DataColumn("Salaire", typeof(decimal));
+
+            // Sauvegarder le champ dans la table 
+            myTB.Columns.Add(myCol);
+
+
+            // Creer le champ ou column Description
+            myCol = new DataColumn("Description", typeof(string));
+            myCol.MaxLength = 250;
+            // Sauvegarder le champ dans la table 
+            myTB.Columns.Add(myCol);
+
+
+            // Creer le champ ou column ReferEquipe
+             myCol = new DataColumn("ReferEquipe", typeof(Int64));
+            // Sauvegarder le champ dans la table 
+            myTB.Columns.Add(myCol);
+
+
+            // Creer les champs indexes
+            mykey = new DataColumn[1];
+            mykey[0] = myTB.Columns["RefJoueur"];
+            myTB.PrimaryKey = mykey;
 
 
             // sauvegarde la Table
             mySet.Tables.Add(myTB);
+
+
+
 
             return mySet;
         }
