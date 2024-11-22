@@ -19,7 +19,7 @@ namespace prjWebCsAdoDataSet
             if (IsPostBack == false)
             {
                 setSport = CreerDataset();
-                gridJoueurs.DataSource = setSport.Tables[0] ;
+                gridJoueurs.DataSource = setSport.Tables["Joueurs"] ;
                 gridJoueurs.DataBind();
             }
         }
@@ -27,6 +27,7 @@ namespace prjWebCsAdoDataSet
         private static DataSet CreerDataset()
         {
             DataSet mySet = new DataSet();
+            /////////----- creation des tables equipe et joueurs
             // Creer la table Equipes
             DataTable myTB = new DataTable("Equipes");
 
@@ -79,46 +80,10 @@ namespace prjWebCsAdoDataSet
             mykey[0] = myTB.Columns["RefEquipe"];
             myTB.PrimaryKey = mykey;
 
-            // Remplir la table Equipes avec des donnees
-            DataRow myRow = myTB.NewRow();
-
-            myRow["Nom"] = "Real De Madrid";
-            myRow["Ville"] = "Madrid (Espagne)";
-            myRow["Budget"] = 150000000;
-            myRow["Coach"] = "Carlos Ancelotti";
-
-            // Sauvegarder l'enregistrement
-            myTB.Rows.Add(myRow);
-
-
-            // Remplir la table Equipes avec des donnees
-             myRow = myTB.NewRow();
-
-            myRow["Nom"] = "Barcelone";
-            myRow["Ville"] = "Barcelone (Espagne)";
-            myRow["Budget"] = 150000000;
-            myRow["Coach"] = "Xavi";
-
-            // Sauvegarder l'enregistrement
-            myTB.Rows.Add(myRow);
-
-            // Remplir la table Equipes avec des donnees
-            myRow = myTB.NewRow();
-
-            myRow["Nom"] = "Raja";
-            myRow["Ville"] = "Casa (Maroc)";
-            myRow["Budget"] = 150000;
-            myRow["Coach"] = "Hassane 2";
-
-            // Sauvegarder l'enregistrement
-            myTB.Rows.Add(myRow);
-
-
 
             // sauvegarde la Table
             mySet.Tables.Add(myTB);
 
-            ///////////////////////////////////////////////////////////////////////////////////
 
             // Creer la table Joueurs
              myTB = new DataTable("Joueurs");
@@ -174,11 +139,118 @@ namespace prjWebCsAdoDataSet
             mykey[0] = myTB.Columns["RefJoueur"];
             myTB.PrimaryKey = mykey;
 
-
-            // sauvegarde la Table
+            // sauvegarder la table Joueurs 
             mySet.Tables.Add(myTB);
 
 
+            ///// ------     creation relation les tables        ---------//////
+            DataRelation myRel = new DataRelation("Equipes_Joueurs", mySet.Tables["Equipes"].Columns["RefEquipe"],
+                                                   mySet.Tables["Joueurs"].Columns["ReferEquipe"]);   
+
+            //sauvegarder la relation
+            mySet.Relations.Add(myRel);
+
+
+            ///// ------     remplir les tables de donnees        ---------//////
+            myTB = mySet.Tables["Equipes"];
+            // Remplir la table Equipes avec des donnees
+            DataRow myRow = myTB.NewRow();
+
+            myRow["Nom"] = "Real De Madrid";
+            myRow["Ville"] = "Madrid (Espagne)";
+            myRow["Budget"] = 150000000;
+            myRow["Coach"] = "Carlos Ancelotti";
+
+            // Sauvegarder l'enregistrement
+            myTB.Rows.Add(myRow);
+
+
+            // Remplir la table Equipes avec des donnees
+            myRow = myTB.NewRow();
+
+            myRow["Nom"] = "Barcelone";
+            myRow["Ville"] = "Barcelone (Espagne)";
+            myRow["Budget"] = 150000000;
+            myRow["Coach"] = "Xavi";
+
+            // Sauvegarder l'enregistrement
+            myTB.Rows.Add(myRow);
+
+            // Remplir la table Equipes avec des donnees
+            myRow = myTB.NewRow();
+
+            myRow["Nom"] = "Raja";
+            myRow["Ville"] = "Casa (Maroc)";
+            myRow["Budget"] = 150000;
+            myRow["Coach"] = "Hassane 2";
+
+            // Sauvegarder l'enregistrement
+            myTB.Rows.Add(myRow);
+
+
+
+
+
+            //Remplir tables Joueurs
+            myTB = mySet.Tables["Joueurs"];
+            myRow = myTB.NewRow();
+            myRow["Nom"] = "Vinicius Junior";
+            myRow["Poste"] = "Attaque";
+            myRow["Salaire"] = 15000000;
+            myRow["Description"] = "Meilleur ailier au monde";
+            myRow["ReferEquipe"] = 1;
+
+            // Sauvegarder joueur 
+            myTB.Rows.Add(myRow);
+
+
+            //Remplir tables Joueurs
+            myRow = myTB.NewRow();
+            myRow["Nom"] = "Bellighan Jude";
+            myRow["Poste"] = "Attaque";
+            myRow["Salaire"] = 15000000;
+            myRow["Description"] = "Meilleur joueur au monde";
+            myRow["ReferEquipe"] = 1;
+
+            // Sauvegarder joueur 
+            myTB.Rows.Add(myRow);
+
+
+            //Remplir tables Joueurs
+            myRow = myTB.NewRow();
+            myRow["Nom"] = "Lamine Yamal";
+            myRow["Poste"] = "Attaque";
+            myRow["Salaire"] = 17000000;
+            myRow["Description"] = "Meilleur jeune joueur au monde";
+            myRow["ReferEquipe"] = 2;
+
+            // Sauvegarder joueur 
+            myTB.Rows.Add(myRow);
+
+
+            //Remplir tables Joueurs
+            myRow = myTB.NewRow();
+            myRow["Nom"] = "Lewandosky Robert";
+            myRow["Poste"] = "meilleur vieux joueur";
+            myRow["Salaire"] = 1500;
+            myRow["Description"] = "Neveu du roi";
+            myRow["ReferEquipe"] = 3;
+
+            // Sauvegarder joueur 
+            myTB.Rows.Add(myRow);
+
+
+
+            //Remplir tables Joueurs
+            myRow = myTB.NewRow();
+            myRow["Nom"] = "Aziz Bouderballa";
+            myRow["Poste"] = "Goalkeeper";
+            myRow["Salaire"] = 1500;
+            myRow["Description"] = "Neveu du roi";
+            myRow["ReferEquipe"] = 3;
+
+            // Sauvegarder joueur 
+            myTB.Rows.Add(myRow);
 
 
             return mySet;

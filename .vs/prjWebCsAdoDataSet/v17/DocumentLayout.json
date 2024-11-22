@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\webdatasetlocal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|c:\\users\\elmou\\session4_cs\\prjwebcsadodataset\\prjwebcsadodataset\\prjwebcsadodataset\\webdatasetlocal.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjwebcsadodataset\\webdatasetlocal.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\webdatasetlocal.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,8 +38,7 @@
               "RelativeToolTip": "prjWebCsAdoDataSet\\webDatasetLocal.aspx.designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T13:20:05.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T13:20:05.834Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
               "ToolTip": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
               "RelativeToolTip": "prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAUwLQAAAAAAAAA",
+              "ViewState": "AQIAAPkAAAAAAAAAAAAAAAABAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T16:23:03.932Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "prjWebCsAdoDataSet\\webDatasetLocal.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-15T16:18:16.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T16:18:16.675Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "prjWebCsAdoDataSet\\modele.txt",
               "ViewState": "AQIAAEcAAAAAAAAAAAAiwGYAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-15T16:16:59.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T16:16:59.073Z"
             }
           ]
         }
