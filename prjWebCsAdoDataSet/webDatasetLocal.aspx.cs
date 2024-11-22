@@ -19,8 +19,22 @@ namespace prjWebCsAdoDataSet
             if (IsPostBack == false)
             {
                 setSport = CreerDataset();
-                gridJoueurs.DataSource = setSport.Tables["Joueurs"] ;
+                RemplirListeEquipes();
+                gridJoueurs.DataSource = setSport.Tables["Equipes"] ;
                 gridJoueurs.DataBind();
+            }
+        }
+
+        private void RemplirListeEquipes()
+        {
+            //Remplir le listboc avec les equipe (Nom , Ref equipe)
+            //version Boucle
+            foreach(DataRow myrow in setSport.Tables["Equipes"].Rows) 
+            {
+                ListItem elm = new ListItem();
+                elm.Text = myrow["Nom"].ToString();
+                elm.Value = myrow["RefEquipe"].ToString() ;
+                lstEquipes.Items.Add(elm);
             }
         }
 
@@ -254,6 +268,25 @@ namespace prjWebCsAdoDataSet
 
 
             return mySet;
+        }
+
+        protected void lstEquipes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // on recupere la value de l'element (Equipe) selectionne
+            string refEquipChoisi = lstEquipes.SelectedItem.Value;
+
+            //version Boucle pour trouver equipe
+            foreach (DataRow myrow in setSport.Tables["Equipes"].Rows)
+            {
+                if(refEquipChoisi == myrow["RefEquipe"].ToString())
+                {
+                    txtNom.Text = myrow["Nom"].ToString();
+                    txtVille.Text = myrow["Ville"].ToString();
+                    txtBudget.Text = myrow["Budget"].ToString();
+                    txtCoach.Text = myrow["Coach"].ToString();
+                    break;
+                }
+            }
         }
     }
 }

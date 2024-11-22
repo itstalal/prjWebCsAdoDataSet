@@ -39,7 +39,7 @@
                 <tr>
                     <td>
                         Choisir une equipe<br />
-                        <asp:ListBox ID="lstEquipes" runat="server" AutoPostBack="True" Font-Bold="True" ForeColor="Blue" Height="100" Width="200"></asp:ListBox>
+                        <asp:ListBox ID="lstEquipes" OnSelectedIndexChanged="lstEquipes_SelectedIndexChanged" runat="server" AutoPostBack="True" Font-Bold="True" ForeColor="Blue" Height="100" Width="200"></asp:ListBox>
                     </td>
                     <td>
 
