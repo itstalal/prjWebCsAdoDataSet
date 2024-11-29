@@ -20,22 +20,29 @@ namespace prjWebCsAdoDataSet
             {
                 setSport = CreerDataset();
                 RemplirListeEquipes();
-                gridJoueurs.DataSource = setSport.Tables["Equipes"] ;
+                gridJoueurs.DataSource = setSport.Tables["Joueurs"];
                 gridJoueurs.DataBind();
             }
         }
 
         private void RemplirListeEquipes()
         {
-            //Remplir le listboc avec les equipe (Nom , Ref equipe)
+            //Remplir le listbox avec les equipe (Nom , Ref equipe)
             //version Boucle
-            foreach(DataRow myrow in setSport.Tables["Equipes"].Rows) 
-            {
-                ListItem elm = new ListItem();
-                elm.Text = myrow["Nom"].ToString();
-                elm.Value = myrow["RefEquipe"].ToString() ;
-                lstEquipes.Items.Add(elm);
-            }
+            /* foreach(DataRow myrow in setSport.Tables["Equipes"].Rows) 
+             {
+                 ListItem elm = new ListItem();
+                 elm.Text = myrow["Nom"].ToString();
+                 elm.Value = myrow["RefEquipe"].ToString() ;
+                 lstEquipes.Items.Add(elm);
+             }*/
+            //version databinding
+            //colonne a afficher
+            lstEquipes.DataTextField = "Nom";
+            //colonne a cacher
+            lstEquipes.DataValueField = "RefEquipe";
+            lstEquipes.DataSource = setSport.Tables["Equipes"];
+            lstEquipes.DataBind();
         }
 
         private static DataSet CreerDataset()
@@ -100,10 +107,10 @@ namespace prjWebCsAdoDataSet
 
 
             // Creer la table Joueurs
-             myTB = new DataTable("Joueurs");
+            myTB = new DataTable("Joueurs");
 
             // Creer le champ ou column RefJoueurs
-             myCol = new DataColumn("RefJoueur", typeof(Int64));
+            myCol = new DataColumn("RefJoueur", typeof(Int64));
 
             myCol.AutoIncrement = true;
             myCol.AutoIncrementSeed = 1;
@@ -143,7 +150,7 @@ namespace prjWebCsAdoDataSet
 
 
             // Creer le champ ou column ReferEquipe
-             myCol = new DataColumn("ReferEquipe", typeof(Int64));
+            myCol = new DataColumn("ReferEquipe", typeof(Int64));
             // Sauvegarder le champ dans la table 
             myTB.Columns.Add(myCol);
 
@@ -159,13 +166,13 @@ namespace prjWebCsAdoDataSet
 
             ///// ------     creation relation les tables        ---------//////
             DataRelation myRel = new DataRelation("Equipes_Joueurs", mySet.Tables["Equipes"].Columns["RefEquipe"],
-                                                   mySet.Tables["Joueurs"].Columns["ReferEquipe"]);   
+                                                   mySet.Tables["Joueurs"].Columns["ReferEquipe"]);
 
             //sauvegarder la relation
             mySet.Relations.Add(myRel);
 
 
-            ///// ------     remplir les tables de donnees        ---------//////
+            ///// ------     remplir les tables de donnees     ---------//////
             myTB = mySet.Tables["Equipes"];
             // Remplir la table Equipes avec des donnees
             DataRow myRow = myTB.NewRow();
@@ -248,7 +255,7 @@ namespace prjWebCsAdoDataSet
             myRow["Poste"] = "meilleur vieux joueur";
             myRow["Salaire"] = 1500;
             myRow["Description"] = "Neveu du roi";
-            myRow["ReferEquipe"] = 3;
+            myRow["ReferEquipe"] = 2;
 
             // Sauvegarder joueur 
             myTB.Rows.Add(myRow);
@@ -276,7 +283,7 @@ namespace prjWebCsAdoDataSet
             string refEquipChoisi = lstEquipes.SelectedItem.Value;
 
             //version Boucle pour trouver equipe
-            foreach (DataRow myrow in setSport.Tables["Equipes"].Rows)
+            /*foreach (DataRow myrow in setSport.Tables["Equipes"].Rows)
             {
                 if(refEquipChoisi == myrow["RefEquipe"].ToString())
                 {
@@ -285,8 +292,30 @@ namespace prjWebCsAdoDataSet
                     txtBudget.Text = myrow["Budget"].ToString();
                     txtCoach.Text = myrow["Coach"].ToString();
                     break;
+                }*/
+            //version POO avec la methode Find de Rows 
+            DataRow myrow = setSport.Tables["Equipes"].Rows.Find(refEquipChoisi);
+            txtNom.Text = myrow["Nom"].ToString();
+            txtVille.Text = myrow["Ville"].ToString();
+            txtBudget.Text = myrow["Budget"].ToString();
+            txtCoach.Text = myrow["Coach"].ToString();
+
+
+
+            //-------- Trouver les joueurs de cette equipe --------///
+            //version boucle 
+            //creer une table temporaire de la meme structure que la table joueurs 
+            DataTable tmpJoureurs = setSport.Tables["Joueurs"].Clone();
+            foreach(DataRow myrowJr in setSport.Tables["Joueurs"].Rows)
+            {
+                if(refEquipChoisi == myrowJr["referEquipe"].ToString())
+                {
+                    tmpJoureurs.ImportRow(myrowJr);
                 }
             }
+            gridJoueurs.DataSource = tmpJoureurs;
+            gridJoueurs.DataBind();
+
         }
     }
 }
