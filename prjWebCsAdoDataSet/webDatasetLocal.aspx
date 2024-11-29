@@ -48,10 +48,10 @@
         <td colspan="2">Gestion de equipe selectionnee</td>
        
         <td rowspan="5">
-            <asp:Button ID="btnAjouter" runat="server" Text="Ajouter" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
-            <asp:Button ID="btnModifier" runat="server" Text="Modifier" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
+            <asp:Button ID="btnAjouter" OnClick="btnAjouter_Click" runat="server" Text="Ajouter" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
+            <asp:Button ID="btnModifier" OnClick="btnModifier_Click" runat="server" Text="Modifier" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
             <asp:Button ID="btnSupprimer" runat="server" OnClientClick="return valider();" Text="Supprimer" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
-            <asp:Button ID="btnSauvgarder" runat="server" Text="Sauvgarder" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
+            <asp:Button ID="btnSauvgarder" OnClick="btnSauvgarder_Click" runat="server" Text="Sauvgarder" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" /><br />
             <asp:Button ID="btnAnnuler" runat="server" Text="Annuler" Font-Bold="True" ForeColor="White" BackColor="Brown" Width="150px" />
         </td>
     </tr>

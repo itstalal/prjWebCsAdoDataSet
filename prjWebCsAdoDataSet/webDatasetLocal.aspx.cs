@@ -14,14 +14,19 @@ namespace prjWebCsAdoDataSet
 
         static DataSet setSport;
         static DataTable tabEkip;
+        static string mode;
+        static string refEquipChoisi;
+        static int indiceChoisi;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack == false)
             {
                 setSport = CreerDataset();
                 RemplirListeEquipes();
-                gridJoueurs.DataSource = setSport.Tables["Joueurs"];
-                gridJoueurs.DataBind();
+
+                lstEquipes.SelectedIndex = 0; //choisi le premier element
+                lstEquipes_SelectedIndexChanged(sender, e);
+                cacherBoutons(true,false);
             }
         }
 
@@ -279,8 +284,9 @@ namespace prjWebCsAdoDataSet
 
         protected void lstEquipes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            indiceChoisi = lstEquipes.SelectedIndex;
             // on recupere la value de l'element (Equipe) selectionne
-            string refEquipChoisi = lstEquipes.SelectedItem.Value;
+             refEquipChoisi = lstEquipes.SelectedItem.Value;
 
             //version Boucle pour trouver equipe
             /*foreach (DataRow myrow in setSport.Tables["Equipes"].Rows)
@@ -315,6 +321,70 @@ namespace prjWebCsAdoDataSet
             }
             gridJoueurs.DataSource = tmpJoureurs;
             gridJoueurs.DataBind();
+
+        }
+
+        protected void btnAjouter_Click(object sender, EventArgs e)
+        {
+            mode = "ajout";
+            txtBudget.Text = txtCoach.Text = txtNom.Text = txtVille.Text = " ";
+            txtNom.Focus();
+            cacherBoutons(false, true);
+        }
+
+        private void cacherBoutons(bool btnAjModSup , bool btnSauvAn)
+        {
+            btnAjouter.Visible = btnAjModSup;
+            btnModifier.Visible = btnAjModSup;
+            btnSupprimer.Visible = btnAjModSup;
+            btnSauvgarder.Visible = btnSauvAn;
+            btnAnnuler.Visible = btnSauvAn;
+        }
+
+        protected void btnSauvgarder_Click(object sender, EventArgs e)
+        {
+                DataTable myTb = setSport.Tables["Equipes"];
+            if (mode == "ajout")
+            {
+                // Remplir la table Equipes avec des donnees
+                DataRow myRow = myTb.NewRow();
+
+                myRow["Nom"] = txtNom.Text;
+                myRow["Ville"] = txtVille.Text;
+                myRow["Budget"] = Convert.ToDecimal(txtBudget.Text);
+                myRow["Coach"] = txtCoach.Text;
+
+                // Sauvegarder l'enregistrement
+                myTb.Rows.Add(myRow);
+
+                lstEquipes.SelectedIndex = lstEquipes.Items.Count - 1; //choisi le premier element
+             
+            }
+           
+            if(mode == "modif")
+            {
+                DataRow myRow = myTb.Rows.Find(refEquipChoisi);
+                myRow["Nom"] = txtNom.Text;
+                myRow["Ville"] = txtVille.Text;
+                myRow["Budget"] = Convert.ToDecimal(txtBudget.Text);
+                myRow["Coach"] = txtCoach.Text;
+               
+
+                lstEquipes.SelectedIndex = indiceChoisi; //choisi le premier element
+                
+
+            }
+            mode = "";
+            RemplirListeEquipes();
+            lstEquipes_SelectedIndexChanged(sender, e);
+            cacherBoutons(true, false);
+
+        }
+
+        protected void btnModifier_Click(object sender, EventArgs e)
+        {
+            mode = "modif";
+            cacherBoutons(false, true);
 
         }
     }
