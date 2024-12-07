@@ -67,12 +67,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SportDb.mdf" />
+    <Content Include="App_Data\SportDb_log.ldf">
+      <DependentUpon>SportDb.mdf</DependentUpon>
+    </Content>
     <Content Include="modele.txt" />
     <Content Include="Web.config" />
+    <Content Include="webConnectDataset.aspx" />
     <Content Include="webDatasetLocal.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="webConnectDataset.aspx.cs">
+      <DependentUpon>webConnectDataset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webConnectDataset.aspx.designer.cs">
+      <DependentUpon>webConnectDataset.aspx</DependentUpon>
+    </Compile>
     <Compile Include="webDatasetLocal.aspx.cs">
       <DependentUpon>webDatasetLocal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
