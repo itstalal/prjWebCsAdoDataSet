@@ -75,6 +75,7 @@
     <Content Include="Web.config" />
     <Content Include="webConnectDataset.aspx" />
     <Content Include="webDatasetLocal.aspx" />
+    <Content Include="webLinqDataset.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="webDatasetLocal.aspx.designer.cs">
       <DependentUpon>webDatasetLocal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webLinqDataset.aspx.cs">
+      <DependentUpon>webLinqDataset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webLinqDataset.aspx.designer.cs">
+      <DependentUpon>webLinqDataset.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

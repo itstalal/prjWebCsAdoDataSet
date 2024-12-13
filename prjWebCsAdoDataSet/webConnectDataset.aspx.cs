@@ -23,6 +23,7 @@ namespace prjWebCsAdoDataSet
         {
             if (IsPostBack == false)
             {
+                //premier point
                 setSport = OuvrirRemplirDataSet();
                 RemplirListeEquipes();
 

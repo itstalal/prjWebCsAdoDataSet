@@ -3,19 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|c:\\users\\elmou\\session4_cs\\prjwebcsadodataset\\prjwebcsadodataset\\prjwebcsadodataset\\weblinqdataset.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\weblinqdataset.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|c:\\users\\elmou\\session4_cs\\prjwebcsadodataset\\prjwebcsadodataset\\prjwebcsadodataset\\webconnectdataset.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\webconnectdataset.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ELMOU_SESSION4_CS_PRJWEBCSADODATASET_PRJWEBCSADODATASET_PRJWEBCSADODATASET_APP_DATA_SPORTDB.MDF/True/SqlTable/dbo.Equipes.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|c:\\users\\elmou\\session4_cs\\prjwebcsadodataset\\prjwebcsadodataset\\prjwebcsadodataset\\webconnectdataset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\webconnectdataset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|c:\\users\\elmou\\session4_cs\\prjwebcsadodataset\\prjwebcsadodataset\\prjwebcsadodataset\\webdatasetlocal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\webdatasetlocal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|c:\\users\\elmou\\session4_cs\\prjwebcsadodataset\\prjwebcsadodataset\\prjwebcsadodataset\\weblinqdataset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8EBB4DD9-4F83-48C5-9A27-3C23D364F2DE}|prjWebCsAdoDataSet\\prjWebCsAdoDataSet.csproj|solutionrelative:prjwebcsadodataset\\weblinqdataset.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,51 +26,41 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Equipes [Donn\u00E9es]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ELMOU_SESSION4_CS_PRJWEBCSADODATASET_PRJWEBCSADODATASET_PRJWEBCSADODATASET_APP_DATA_SPORTDB.MDF/True/SqlTable/dbo.Equipes.sql",
-              "ToolTip": "dbo.Equipes [Donn\u00E9es]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-12-06T17:07:33.889Z",
+              "DocumentIndex": 2,
+              "Title": "webLinqDataset.aspx",
+              "DocumentMoniker": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webLinqDataset.aspx",
+              "RelativeDocumentMoniker": "prjWebCsAdoDataSet\\webLinqDataset.aspx",
+              "ToolTip": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webLinqDataset.aspx",
+              "RelativeToolTip": "prjWebCsAdoDataSet\\webLinqDataset.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-12-13T15:40:52.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "webLinqDataset.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webLinqDataset.aspx.cs",
+              "RelativeDocumentMoniker": "prjWebCsAdoDataSet\\webLinqDataset.aspx.cs",
+              "ToolTip": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webLinqDataset.aspx.cs",
+              "RelativeToolTip": "prjWebCsAdoDataSet\\webLinqDataset.aspx.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB4AAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:01:21.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "webConnectDataset.aspx.cs",
               "DocumentMoniker": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webConnectDataset.aspx.cs",
               "RelativeDocumentMoniker": "prjWebCsAdoDataSet\\webConnectDataset.aspx.cs",
               "ToolTip": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webConnectDataset.aspx.cs",
               "RelativeToolTip": "prjWebCsAdoDataSet\\webConnectDataset.aspx.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAowLMAAAAAAAAA",
+              "ViewState": "AQIAAH0AAAAAAAAAAAApwI4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T15:03:20.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "webConnectDataset.aspx",
-              "DocumentMoniker": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webConnectDataset.aspx",
-              "RelativeDocumentMoniker": "prjWebCsAdoDataSet\\webConnectDataset.aspx",
-              "ToolTip": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webConnectDataset.aspx",
-              "RelativeToolTip": "prjWebCsAdoDataSet\\webConnectDataset.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-06T13:38:32.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "webDatasetLocal.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
-              "RelativeDocumentMoniker": "prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
-              "ToolTip": "C:\\Users\\elmou\\Session4_Cs\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
-              "RelativeToolTip": "prjWebCsAdoDataSet\\webDatasetLocal.aspx.cs",
-              "ViewState": "AQIAAKwAAAAAAAAAAAAkwGwBAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:23:03.932Z",
               "EditorCaption": ""
             }
           ]
